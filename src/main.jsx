@@ -3,6 +3,7 @@ import React from 'react'
 
 // Styles
 import "normalize.css"
+import "./styles/main.css"
 
 import { RouterManager } from './routes'
 

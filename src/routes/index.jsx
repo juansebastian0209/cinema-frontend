@@ -1,8 +1,10 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import React from 'react'
 
+import { SitePage } from '../core/pages'
+
 const RouterBrowser = createBrowserRouter([
-    { path: "/", element: <b>Hello root path</b> }
+    { path: "/dashboard/sites", caseSensitive: true, element: <SitePage /> }
 ])
 
 export const RouterManager = () => {
