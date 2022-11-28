@@ -1,6 +1,6 @@
 .sidebar-container {
     padding: .5em 1em;
-    max-width: 300px;
+    width: 425px;
     height: 100%;
 
     display: flex;
@@ -14,6 +14,16 @@
     flex-flow: row column;
     align-items: center;
     padding: 1em 0;
+}
+
+.sidebar-container__brand p span  {
+    font-size: 3em;
+    padding: .25em;
+}
+
+.sidebar-container__brand p span:last-child  {
+    background-color: blue;
+    color: white;
 }
 
 .sidebar-container__brand > img {

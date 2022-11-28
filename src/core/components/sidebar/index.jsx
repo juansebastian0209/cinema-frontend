@@ -9,8 +9,15 @@ export const SidebarComponent = ({ page }) => {
     return (
         <nav className='sidebar-container'>
             <section className='sidebar-container__brand'>
+                {/* 
                 <img src={brandImage} alt="cinema brand image." />
-                <h1>CINEMA</h1>
+                <h1>CINEMA</h1> 
+                */}
+                <p>
+                    <span>IMAX</span>
+                    <span>CINE +</span>
+                </p>
+
             </section>
 
             <ul className="sidebar-container__pages">
