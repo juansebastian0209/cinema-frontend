@@ -25,7 +25,7 @@ const TableContent = ({ columns = [], rows = [] }) => {
         const render = []
         for (const column of columns) {
             if (column.render) {
-                render.push(<td key={column.label}>{column.render(row)}</td>)
+                render.push(<td key={column.label}>{column.render({ row })}</td>)
                 continue
             }
             render.push(<td key={column.label}>{row[column.key]}</td>)
