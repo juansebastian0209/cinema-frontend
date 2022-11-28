@@ -1,6 +1,6 @@
 .sidebar-container {
     padding: .5em 1em;
-    width: 350px;
+    width: 370px;
     height: 100%;
 
     display: flex;
@@ -16,23 +16,23 @@
     padding: 1em 0;
 }
 
-.sidebar-container__brand p span  {
+.sidebar-container__brand p span {
     font-size: 2.5em;
     padding: .25em;
 }
 
-.sidebar-container__brand p span:last-child  {
+.sidebar-container__brand p span:last-child {
     background-color: blue;
     color: white;
 }
 
-.sidebar-container__brand > img {
+.sidebar-container__brand>img {
     height: 50px;
     width: 50px;
     margin-right: .5em;
 }
 
-.sidebar-container__brand > h1 {
+.sidebar-container__brand>h1 {
     margin: 0;
     font-size: 3em;
 }
@@ -41,7 +41,7 @@
     list-style: none;
 }
 
-.sidebar-container__pages li a { 
+.sidebar-container__pages li a {
     padding: .5em;
 
     color: #000;
