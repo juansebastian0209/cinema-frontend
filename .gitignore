@@ -25,3 +25,6 @@ dist-ssr
 
 # NPM Lock files
 package-lock.json
+
+# Env File
+.env

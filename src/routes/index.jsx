@@ -4,11 +4,37 @@ import React from 'react'
 import { SitePage, MoviePage, PresentationPage, RoomPage, SalesPage } from '../core/pages'
 
 const RouterBrowser = createBrowserRouter([
-    { path: "/dashboard/sales", caseSensitive: true, element: <PresentationPage /> },
-    { path: "/dashboard/presentations", caseSensitive: true, element: <SitePage /> },
-    { path: "/dashboard/movies", caseSensitive: true, element: <MoviePage /> },
-    { path: "/dashboard/sites", caseSensitive: true, element: <SalesPage /> },
-    { path: "/dashboard/rooms", caseSensitive: true, element: <RoomPage /> },
+    {
+        element: <SalesPage />,
+        path: "/dashboard/sales",
+        caseSensitive: true,
+    },
+    {
+        path: "/dashboard/presentations",
+        element: <PresentationPage />,
+        caseSensitive: true,
+    },
+    {
+        path: "/dashboard/movies",
+        element: <MoviePage />,
+        caseSensitive: true,
+    },
+    {
+        path: "/dashboard/sites",
+        element: <SitePage />,
+        caseSensitive: true,
+        loader: async ({ request }) => {
+            return await fetch(
+                `${import.meta.env.VITE_BACKEND_URL}/site`,
+                { signal: request.signal }
+            )
+        },
+    },
+    {
+        path: "/dashboard/rooms",
+        element: <RoomPage />,
+        caseSensitive: true,
+    },
 ])
 
 export const RouterManager = () => {
