@@ -1,6 +1,9 @@
+import { GrLocation, IoTrailSign, IoVideocam, RiMovie2Line, RiMoneyDollarCircleFill } from 'react-icons/all'
+import { NavLink } from 'react-router-dom'
 import React from "react"
 
 import brandImage from '../../../assets/brand.png'
+import "./style.css"
 
 export const SidebarComponent = ({ page }) => {
     return (
@@ -9,16 +12,38 @@ export const SidebarComponent = ({ page }) => {
                 <img src={brandImage} alt="cinema brand image." />
                 <h1>CINEMA</h1>
             </section>
-            <ul>
-                <li>Sedes</li>
-                <li>Salas</li>
-                <li>Peliculas</li>
-                <li>Funciones</li>
-                <li>Ventas</li>
-            </ul>
 
-            <ul>
-                <li>cerrar sesión</li>
+            <ul className="sidebar-container__pages">
+                <li>
+                    <NavLink to="/dashboard/sites">
+                        <GrLocation />
+                        <span>Sedes</span>
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to="/dashboard/rooms">
+                        <IoTrailSign />
+                        <span>Salas</span>
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to="/dashboard/movies">
+                        <RiMovie2Line />
+                        <span>Peliculas</span>
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to="/dashboard/presentations">
+                        <IoVideocam />
+                        <span>Funciones</span>
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to="/dashboard/sales">
+                        <RiMoneyDollarCircleFill />
+                        <span>Ventas</span>
+                    </NavLink>
+                </li>
             </ul>
         </nav>
     )

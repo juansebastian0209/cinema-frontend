@@ -1,0 +1,20 @@
+.dashboard-container {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-flow: row nowrap;
+    overflow-y: auto;
+}
+
+.main-container {
+    display: flex;
+    flex-flow: column nowrap;
+
+    width: 100%;
+    padding: 1.5em 1em;
+}
+
+.page-container {
+    width: 100%;
+}
