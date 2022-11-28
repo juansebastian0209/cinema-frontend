@@ -1,5 +1,7 @@
 import React from "react"
 
+import "./style.css"
+
 const TableHeader = ({ columns = [] }) => {
 
     const columnRender = () => {
@@ -46,10 +48,6 @@ const TableContent = ({ columns = [], rows = [] }) => {
             {rowsRender(rows)}
         </tbody>
     )
-}
-
-const TableControl = () => {
-
 }
 
 export const Table = ({ columns, rows }) => {

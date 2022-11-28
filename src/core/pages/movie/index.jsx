@@ -1,4 +1,6 @@
+import { FaEdit, FaTrashAlt } from 'react-icons/all'
 import { useLoaderData } from 'react-router-dom'
+import moment from 'moment'
 import React from 'react'
 
 import { DashboardLayout } from '../../layouts/dashboard'
@@ -11,12 +13,17 @@ const columns = [
     },
     {
         label: "Duración",
-        key: "duration"
+        render: ({ row }) => {
+            return <p>{moment.utc(row.duration * 1000).format('HH:mm:ss')}</p>
+        }
     },
     {
         label: "Acciones",
         render: ({ row }) => {
-            return <p>render</p>
+            return [
+                <button className='btn btn-info'><FaEdit /></button>,
+                <button className='btn btn-warning'><FaTrashAlt /></button>
+            ]
         }
     }
 ]

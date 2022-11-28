@@ -14,3 +14,66 @@ html, body {
     padding: 0;
     margin: 0;
 }
+
+.btn {
+    border: none;
+    border-radius: .25em;
+
+    outline: none;
+    cursor: pointer;
+
+    padding: .5em 1.5em;
+    margin-right: .5em;
+
+    font-weight: bold;
+}
+
+.btn.btn-success {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn.btn-warning {
+    background-color: #ffc107;
+    color: white;
+}
+
+.btn.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn.btn-info {
+    background-color: #17a2b8;
+    color: white;
+}
+
+.badge {
+
+    display: inline-flex;
+    align-items: center;
+
+    padding: .5em 1.5em;
+    margin-right: .5em;
+    font-weight: bold;
+}
+
+.badge.badge-success {
+    background-color: #28a745;
+    color: white;
+}
+
+.badge.badge-warning {
+    background-color: #ffc107;
+    color: white;
+}
+
+.badge.badge-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+.badge.badge-info {
+    background-color: #17a2b8;
+    color: white;
+}

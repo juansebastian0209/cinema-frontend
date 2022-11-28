@@ -1,5 +1,8 @@
+import { FaEdit, FaTrashAlt } from 'react-icons/all'
 import { useLoaderData } from 'react-router-dom'
+import moment from 'moment'
 import React from 'react'
+
 
 import { DashboardLayout } from '../../layouts/dashboard'
 import { Table } from '../../components/table'
@@ -7,20 +10,44 @@ import { Table } from '../../components/table'
 const columns = [
     {
         label: "Pelicula",
-        key: "movieId"
+        render: ({ row }) => {
+            return [
+                <b>{row.movieName}</b>,
+                <p>{moment.utc(row.movieDuration * 1000).format('HH:mm:ss')}</p>
+            ]
+        }
+    },
+    {
+        label: "Sede",
+        render: ({ row }) => {
+            return [
+                <b>{row.siteName}</b>,
+                <p>{row.siteAddress}</p>,
+            ]
+        }
     },
     {
         label: "Sala",
-        key: "roomId"
+        render: ({ row }) => {
+            return (
+                <span className='badge badge-danger'>{row.roomNumber}</span>
+            )
+
+        }
     },
     {
         label: "Fecha de función",
-        key: "date"
+        render: ({ row }) => {
+            return moment(row.date).format("L")
+        }
     },
     {
         label: "Acciones",
         render: ({ row }) => {
-            return <p>render</p>
+            return [
+                <button className='btn btn-info'><FaEdit /></button>,
+                <button className='btn btn-warning'><FaTrashAlt /></button>
+            ]
         }
     }
 ]

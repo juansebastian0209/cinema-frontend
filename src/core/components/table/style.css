@@ -1,0 +1,23 @@
+.table-component {
+    width: 100%;
+    padding: 1em;
+}
+
+.table-container {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-container thead{
+    background-color: #555;
+}
+
+
+.table-container thead tr th,
+.table-container tbody tr td {
+    padding: 1em .5em;
+}
+
+.table-container tbody tr td {
+    border: 1px solid #555;
+}

@@ -1,3 +1,4 @@
+import { FaEdit, FaTrashAlt } from 'react-icons/all'
 import { useLoaderData } from 'react-router-dom'
 import React from 'react'
 
@@ -7,11 +8,18 @@ import { Table } from '../../components/table'
 const columns = [
     {
         label: "Sede",
-        key: "siteId"
+        render: ({ row }) => {
+            return [
+                <p>{row.siteName}</p>,
+                <b>{row.siteAddress}</b>
+            ]
+        }
     },
     {
         label: "# Sala",
-        key: "number"
+        render: ({ row }) => {
+            return <span className='badge badge-danger'>{row.number}</span>
+        }
     },
     {
         label: "Cantidad de sillas",
@@ -22,7 +30,10 @@ const columns = [
     {
         label: "Acciones",
         render: ({ row }) => {
-            return <p>render</p>
+            return [
+                <button className='btn btn-info'><FaEdit /></button>,
+                <button className='btn btn-warning'><FaTrashAlt /></button>
+            ]
         }
     }
 ]
